@@ -88,6 +88,7 @@
             this.btnProfile.TabIndex = 6;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnProduct
             // 
@@ -97,6 +98,7 @@
             this.btnProduct.TabIndex = 7;
             this.btnProduct.Text = "Product";
             this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnTransaction
             // 

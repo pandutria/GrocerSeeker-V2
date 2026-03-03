@@ -114,7 +114,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(128, 243);
+            this.btnLogin.Location = new System.Drawing.Point(129, 247);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(98, 31);
             this.btnLogin.TabIndex = 9;
@@ -125,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 289);
+            this.label5.Location = new System.Drawing.Point(79, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 16);
             this.label5.TabIndex = 10;
@@ -134,7 +134,7 @@
             // linkRegister
             // 
             this.linkRegister.AutoSize = true;
-            this.linkRegister.Location = new System.Drawing.Point(210, 289);
+            this.linkRegister.Location = new System.Drawing.Point(211, 293);
             this.linkRegister.Name = "linkRegister";
             this.linkRegister.Size = new System.Drawing.Size(55, 16);
             this.linkRegister.TabIndex = 11;

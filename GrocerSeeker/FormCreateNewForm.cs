@@ -25,7 +25,7 @@ namespace GrocerSeeker
             gbCustomer.Enabled = false;
         }
 
-        bool isValidEmail(string email)
+        public static bool isValidEmail(string email)
         {
             var regex = @"^\S+@\S+\.\S+$";
             return Regex.IsMatch(email, regex);
