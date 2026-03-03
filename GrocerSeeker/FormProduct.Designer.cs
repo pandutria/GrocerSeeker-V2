@@ -32,7 +32,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.lblError = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbDetails = new System.Windows.Forms.GroupBox();
+            this.nupStock = new System.Windows.Forms.NumericUpDown();
+            this.nupPrice = new System.Windows.Forms.NumericUpDown();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.cboStatus = new System.Windows.Forms.ComboBox();
@@ -47,26 +49,24 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gbTransaction = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.nupQty = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.lblCost = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnBuy = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.nupPrice = new System.Windows.Forms.NumericUpDown();
-            this.nupStock = new System.Windows.Forms.NumericUpDown();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nupQty = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gbDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).BeginInit();
             this.gbTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupQty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,6 +99,7 @@
             this.dgvData.RowTemplate.Height = 24;
             this.dgvData.Size = new System.Drawing.Size(820, 139);
             this.dgvData.TabIndex = 0;
+            this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             // 
             // lblError
             // 
@@ -109,29 +110,59 @@
             this.lblError.TabIndex = 19;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
+            // gbDetails
             // 
-            this.groupBox2.Controls.Add(this.nupStock);
-            this.groupBox2.Controls.Add(this.nupPrice);
-            this.groupBox2.Controls.Add(this.btnCancel);
-            this.groupBox2.Controls.Add(this.btnSave);
-            this.groupBox2.Controls.Add(this.cboStatus);
-            this.groupBox2.Controls.Add(this.lblStatus);
-            this.groupBox2.Controls.Add(this.rbKg);
-            this.groupBox2.Controls.Add(this.rbPcs);
-            this.groupBox2.Controls.Add(this.lblUnit);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cboCategory);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.tbName);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(31, 395);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(509, 186);
-            this.groupBox2.TabIndex = 20;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Details";
+            this.gbDetails.Controls.Add(this.nupStock);
+            this.gbDetails.Controls.Add(this.nupPrice);
+            this.gbDetails.Controls.Add(this.btnCancel);
+            this.gbDetails.Controls.Add(this.btnSave);
+            this.gbDetails.Controls.Add(this.cboStatus);
+            this.gbDetails.Controls.Add(this.lblStatus);
+            this.gbDetails.Controls.Add(this.rbKg);
+            this.gbDetails.Controls.Add(this.rbPcs);
+            this.gbDetails.Controls.Add(this.lblUnit);
+            this.gbDetails.Controls.Add(this.label3);
+            this.gbDetails.Controls.Add(this.label4);
+            this.gbDetails.Controls.Add(this.cboCategory);
+            this.gbDetails.Controls.Add(this.label2);
+            this.gbDetails.Controls.Add(this.tbName);
+            this.gbDetails.Controls.Add(this.label7);
+            this.gbDetails.Location = new System.Drawing.Point(31, 395);
+            this.gbDetails.Name = "gbDetails";
+            this.gbDetails.Size = new System.Drawing.Size(509, 186);
+            this.gbDetails.TabIndex = 20;
+            this.gbDetails.TabStop = false;
+            this.gbDetails.Text = "Details";
+            // 
+            // nupStock
+            // 
+            this.nupStock.DecimalPlaces = 2;
+            this.nupStock.Location = new System.Drawing.Point(383, 71);
+            this.nupStock.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nupStock.Name = "nupStock";
+            this.nupStock.Size = new System.Drawing.Size(98, 22);
+            this.nupStock.TabIndex = 44;
+            this.nupStock.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // nupPrice
+            // 
+            this.nupPrice.Location = new System.Drawing.Point(383, 37);
+            this.nupPrice.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nupPrice.Name = "nupPrice";
+            this.nupPrice.Size = new System.Drawing.Size(98, 22);
+            this.nupPrice.TabIndex = 43;
             // 
             // btnCancel
             // 
@@ -273,42 +304,24 @@
             this.gbTransaction.TabStop = false;
             this.gbTransaction.Text = "Transactional Area";
             // 
-            // label8
+            // btnClear
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Quantity";
+            this.btnClear.Location = new System.Drawing.Point(214, 74);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(83, 31);
+            this.btnClear.TabIndex = 42;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // nupQty
+            // btnBuy
             // 
-            this.nupQty.Location = new System.Drawing.Point(96, 35);
-            this.nupQty.Name = "nupQty";
-            this.nupQty.Size = new System.Drawing.Size(98, 22);
-            this.nupQty.TabIndex = 22;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 74);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 20);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "Total";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(143, 74);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(51, 20);
-            this.lblTotal.TabIndex = 39;
-            this.lblTotal.Text = "Total";
+            this.btnBuy.Location = new System.Drawing.Point(214, 35);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(83, 31);
+            this.btnBuy.TabIndex = 37;
+            this.btnBuy.Text = "Buy Item";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // lblCost
             // 
@@ -316,9 +329,8 @@
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.Location = new System.Drawing.Point(143, 108);
             this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(51, 20);
+            this.lblCost.Size = new System.Drawing.Size(0, 20);
             this.lblCost.TabIndex = 41;
-            this.lblCost.Text = "Total";
             // 
             // label12
             // 
@@ -330,37 +342,43 @@
             this.label12.TabIndex = 40;
             this.label12.Text = "Delivery Cost";
             // 
-            // btnBuy
+            // lblTotal
             // 
-            this.btnBuy.Location = new System.Drawing.Point(214, 35);
-            this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(83, 31);
-            this.btnBuy.TabIndex = 37;
-            this.btnBuy.Text = "Buy Item";
-            this.btnBuy.UseVisualStyleBackColor = true;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(88, 74);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 20);
+            this.lblTotal.TabIndex = 39;
             // 
-            // btnClear
+            // label9
             // 
-            this.btnClear.Location = new System.Drawing.Point(214, 74);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(83, 31);
-            this.btnClear.TabIndex = 42;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(15, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 20);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Total";
             // 
-            // nupPrice
+            // nupQty
             // 
-            this.nupPrice.Location = new System.Drawing.Point(383, 37);
-            this.nupPrice.Name = "nupPrice";
-            this.nupPrice.Size = new System.Drawing.Size(98, 22);
-            this.nupPrice.TabIndex = 43;
+            this.nupQty.DecimalPlaces = 2;
+            this.nupQty.Location = new System.Drawing.Point(96, 35);
+            this.nupQty.Name = "nupQty";
+            this.nupQty.Size = new System.Drawing.Size(98, 22);
+            this.nupQty.TabIndex = 22;
+            this.nupQty.ValueChanged += new System.EventHandler(this.nupQty_ValueChanged);
             // 
-            // nupStock
+            // label8
             // 
-            this.nupStock.Location = new System.Drawing.Point(383, 71);
-            this.nupStock.Name = "nupStock";
-            this.nupStock.Size = new System.Drawing.Size(98, 22);
-            this.nupStock.TabIndex = 44;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(15, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 20);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Quantity";
             // 
             // btnAdd
             // 
@@ -398,7 +416,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gbTransaction);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbDetails);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -408,13 +426,13 @@
             this.Load += new System.EventHandler(this.FormProduct_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbDetails.ResumeLayout(false);
+            this.gbDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).EndInit();
             this.gbTransaction.ResumeLayout(false);
             this.gbTransaction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupQty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,7 +444,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbDetails;
         private System.Windows.Forms.Label lblUnit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
