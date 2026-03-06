@@ -314,18 +314,6 @@ namespace GrocerSeeker
             }
         }
 
-        private void rbPcs_CheckedChanged(object sender, EventArgs e)
-        {
-            //if (rbPcs.Checked)
-            //{
-            //    nupStock.DecimalPlaces = 2;
-            //}
-            //else
-            //{
-            //    nupStock.DecimalPlaces = 0;
-            //}
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (tbName.Text == string.Empty)

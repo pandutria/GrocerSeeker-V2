@@ -47,5 +47,11 @@ namespace GrocerSeeker
             new FormProduct().Show();
             Hide();
         }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            new FormTransaction().Show();
+            Hide();
+        }
     }
 }

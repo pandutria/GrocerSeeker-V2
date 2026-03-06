@@ -27,8 +27,8 @@ namespace GrocerSeeker
 
             cboLoginAs.DataSource = list;
 
-            tbPhone.Text = "08825457768";
-            tbPassword.Text = "Sangka12345";
+            tbPhone.Text = "08861554350";
+            tbPassword.Text = "Prggro1234";
         }
 
         public static user user;

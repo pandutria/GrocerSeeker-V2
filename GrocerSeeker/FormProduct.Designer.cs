@@ -224,7 +224,6 @@
             this.rbPcs.TabStop = true;
             this.rbPcs.Text = "Countable (pcs)";
             this.rbPcs.UseVisualStyleBackColor = true;
-            this.rbPcs.CheckedChanged += new System.EventHandler(this.rbPcs_CheckedChanged);
             // 
             // lblUnit
             // 

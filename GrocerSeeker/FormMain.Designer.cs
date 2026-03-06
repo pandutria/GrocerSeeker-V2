@@ -108,6 +108,7 @@
             this.btnTransaction.TabIndex = 8;
             this.btnTransaction.Text = "Transaction";
             this.btnTransaction.UseVisualStyleBackColor = true;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
             // 
             // btnLogout
             // 
