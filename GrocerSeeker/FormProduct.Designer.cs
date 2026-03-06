@@ -172,6 +172,7 @@
             this.btnCancel.TabIndex = 36;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -181,6 +182,7 @@
             this.btnSave.TabIndex = 35;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cboStatus
             // 
@@ -210,6 +212,7 @@
             this.rbKg.TabStop = true;
             this.rbKg.Text = "Measurable (kg/lts)";
             this.rbKg.UseVisualStyleBackColor = true;
+            this.rbKg.CheckedChanged += new System.EventHandler(this.rbKg_CheckedChanged);
             // 
             // rbPcs
             // 
@@ -221,6 +224,7 @@
             this.rbPcs.TabStop = true;
             this.rbPcs.Text = "Countable (pcs)";
             this.rbPcs.UseVisualStyleBackColor = true;
+            this.rbPcs.CheckedChanged += new System.EventHandler(this.rbPcs_CheckedChanged);
             // 
             // lblUnit
             // 
@@ -312,6 +316,7 @@
             this.btnClear.TabIndex = 42;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBuy
             // 
@@ -388,6 +393,7 @@
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add Item";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -397,6 +403,7 @@
             this.btnEdit.TabIndex = 44;
             this.btnEdit.Text = "Edit Item";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -406,6 +413,7 @@
             this.btnDelete.TabIndex = 45;
             this.btnDelete.Text = "Delete Item";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormProduct
             // 
